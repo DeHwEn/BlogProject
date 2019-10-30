@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+
+
+{% block contents %}
+
+<div class="container">
+
+<h1>The Login</h1>
+
+<form method = "POST" actions="{% url 'login'%}">
+    {% csrf_token %}
+    Username : 
+    <input name="username" type="text" value="" placeholder="ID"><br><br>
+    Passw0rd :
+    <input name="password" type="password" value="" placeholder="Passw0rd"><br><br>
+    <input class = "btn btn-outline-secondary" type="submit" value"L0gin">
+</form>
+
+</div>
+
+{% endblock %}
+
+</html>
